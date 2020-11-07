@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Letter Generator</title>
+
+    <script src="/assets/js/vue.js" defer></script>
+    <script src="./assets/js/vue-router.js" defer></script>
+    <script src="./assets/js/vuex.js" defer></script>
+    <link href="./assets/css/tailwind.min.css" rel="stylesheet">
+
+
+    <script src="./components/Home.vue.js"></script>
+    <script src="./components/About.vue.js"></script>
+    <script src="./components/Dotcomdotnpletter.vue.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <script src="./main.js" defer></script>
+    
+</head>
+<body>
+
+    <div id="app">
+        <header>
+          <div class="header-top">
+
+          </div>
+          <div class="header-mid px-10 py-8">
+            <router-link to="/">
+            <h1 class="text-lg text-2xl font-bold">
+              <span class="text-blue-600">Simple </span><span class="text-red-600">Letter</span> <span class="text-blue-600">Generator</span>
+            </h1>
+          </router-link>
+
+          </div>
+          <div class="mavigation">
+
+            <nav class="flex bg-blue-700 text-white px-10">
+              <router-link to="/" class="py-3 px-2 inline-block hover:bg-blue-800" :class="{'bg-blue-800' : $route.name == 'home' }"> <i class="fa fa-home"></i> Home</router-link>
+              <router-link to="/dotcomdotnpletter" class="py-3 px-2 inline-block hover:bg-blue-800" :class="{'bg-blue-800' : $route.name == 'dotcomdotnpletter' }"><i class="fa fa-home"></i> .com.np Letter generator</router-link>
+              <router-link to="/about" class="py-3 px-2 inline-block hover:bg-blue-800" :class="{'bg-blue-800' : $route.name == 'about' }"><i class="fa fa-home"></i> About Us</router-link>
+            </nav>
+          </div>
+        </header>
+        <main class="bg-gray-100 py-12">
+
+
+          <router-view></router-view>
+
+
+
+        </main>
+
+
+
+        
+        <footer class="bg-blue-600 text-gray-100 before:bg-red-800">
+
+          <div class="footer-top flex flex-col sm:flex-row flex-wrap px-10 py-12">
+            <div class="w-2/4"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, officia impedit! Libero repellat dolorum perspiciatis pariatur! Dolore non sapiente optio repellat facilis doloremque exercitationem esse, animi officia, suscipit minus voluptatem aut iure totam reprehenderit. Tempora, at repudiandae. Unde eum facilis molestias, adipisci illo voluptatem tenetur est, perspiciatis commodi voluptas sapiente! </div>
+            <div class="w-1/4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quisquam!
+            </div>
+            <div class="w-1/4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quisquam!
+            </div>
+          </div>
+          <div class="copyright-text bg-blue-800 text-blue-100 text-sm py-1 px-10 flex justify-end">
+            <span>Copyright © Simple Form Generator. All rights reserved.</span>
+          </div>
+        </footer>
+        <div class="footer-batch mx-2 flex justify-center -z-index-1">
+          <div class="w-1/2 h-6 shadow-2xl -mr-5 transform skew-x-12 bg-red-600">
+
+          </div>
+          <div class="w-1/2 h-6 shadow-2xl -ml-5 transform -skew-x-12 bg-red-600">
+
+          </div>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Letter Generator</title>
+
+    <script src="/assets/js/vue.js"></script>
+    <script src="./assets/js/vue-router.js" t></script>
+    <script src="./assets/js/vuex.js" t></script>
+    <link href="./assets/css/tailwind.min.css" rel="stylesheet">
+
+
+    <script src="./components/Home.vue.js"></script>
+    <script src="./components/About.vue.js"></script>
+    <script src="./components/Dotcomdotnpletter.vue.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+<body>
+
+    <div id="app" class="mx-64">
+        <input class="bg-gray-200 px-2 py-1 focus:outline-none placeholder-gray-400 text-gray-700 w-full my-2" placeholder="name here " type="text" v-model="name">
+        <input class="bg-gray-200 px-2 py-1 focus:outline-none placeholder-gray-400 text-gray-700 w-full my-2" placeholder="name here " type="text" v-model="post">
+        <input class="bg-gray-200 px-2 py-1 focus:outline-none placeholder-gray-400 text-gray-700 w-full my-2" placeholder="name here " type="text" v-model="domain">
+        <input class="px-12 py-5 focus:outline-none cursor-pointer" :class="{'cursor-wait': sending}" type="submit" @click="submitdata">    
+    </div>
+    
+
+
+
+
+    <script>
+
+
+
+        const app = new Vue({
+        data() {
+
+
+
+
+
+            return {
+                    name:"Master",
+                    post:"",
+                    domain:"",
+                    sending:false,
+                    form:{
+                        
+                    }
+            }
+        },
+        methods: {
+            submitdata(){
+                this.sending = true
+                setInterval(() => {
+                    this.sending = false
+                }, 10000);
+                
+                return 0;
+            }
+        },
+        }).$mount('#app')
+    </script>
+</body>
+</html>
